@@ -24,5 +24,10 @@ namespace Sklep
         {
             InitializeComponent();
         }
+
+        private void DodajPracownika(object sender, DevExpress.Xpf.Bars.ItemClickEventArgs e)
+        {
+
+        }
     }
 }

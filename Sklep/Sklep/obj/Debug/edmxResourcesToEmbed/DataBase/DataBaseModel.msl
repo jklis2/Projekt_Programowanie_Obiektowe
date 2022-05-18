@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Asortyment_sklepuModelStoreContainer" CdmEntityContainer="Asortyment_sklepuEntities">
+    <EntitySetMapping Name="Dostawca">
+      <EntityTypeMapping TypeName="Asortyment_sklepuModel.Dostawca">
+        <MappingFragment StoreEntitySet="Dostawca">
+          <ScalarProperty Name="id_dostawcy" ColumnName="id_dostawcy" />
+          <ScalarProperty Name="nazwa_dostawcy" ColumnName="nazwa_dostawcy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kategoria">
+      <EntityTypeMapping TypeName="Asortyment_sklepuModel.Kategoria">
+        <MappingFragment StoreEntitySet="Kategoria">
+          <ScalarProperty Name="id_kategorii" ColumnName="id_kategorii" />
+          <ScalarProperty Name="nazwa_kategorii" ColumnName="nazwa_kategorii" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kategoria_producent">
+      <EntityTypeMapping TypeName="Asortyment_sklepuModel.Kategoria_producent">
+        <MappingFragment StoreEntitySet="Kategoria_producent">
+          <ScalarProperty Name="id_kategoria_producent" ColumnName="id_kategoria_producent" />
+          <ScalarProperty Name="id_producenta" ColumnName="id_producenta" />
+          <ScalarProperty Name="id_kategorii" ColumnName="id_kategorii" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Opis_produktu">
+      <EntityTypeMapping TypeName="Asortyment_sklepuModel.Opis_produktu">
+        <MappingFragment StoreEntitySet="Opis_produktu">
+          <ScalarProperty Name="id_opisu" ColumnName="id_opisu" />
+          <ScalarProperty Name="opis" ColumnName="opis" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Producent">
+      <EntityTypeMapping TypeName="Asortyment_sklepuModel.Producent">
+        <MappingFragment StoreEntitySet="Producent">
+          <ScalarProperty Name="id_producenta" ColumnName="id_producenta" />
+          <ScalarProperty Name="nazwa_producenta" ColumnName="nazwa_producenta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Produkt">
+      <EntityTypeMapping TypeName="Asortyment_sklepuModel.Produkt">
+        <MappingFragment StoreEntitySet="Produkt">
+          <ScalarProperty Name="id_produktu" ColumnName="id_produktu" />
+          <ScalarProperty Name="id_kategoria_producent" ColumnName="id_kategoria_producent" />
+          <ScalarProperty Name="id_dostawcy" ColumnName="id_dostawcy" />
+          <ScalarProperty Name="id_zdjęcia" ColumnName="id_zdjęcia" />
+          <ScalarProperty Name="id_opisu" ColumnName="id_opisu" />
+          <ScalarProperty Name="nazwa_produktu" ColumnName="nazwa_produktu" />
+          <ScalarProperty Name="ilosc_sztuk_w_sklepie" ColumnName="ilosc_sztuk_w_sklepie" />
+          <ScalarProperty Name="cena" ColumnName="cena" />
+          <ScalarProperty Name="data_kolejnej_dostawy" ColumnName="data_kolejnej_dostawy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="Asortyment_sklepuModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Zdjecie_produktu">
+      <EntityTypeMapping TypeName="Asortyment_sklepuModel.Zdjecie_produktu">
+        <MappingFragment StoreEntitySet="Zdjecie_produktu">
+          <ScalarProperty Name="id_zdjecia" ColumnName="id_zdjecia" />
+          <ScalarProperty Name="nazwa_zdjecia" ColumnName="nazwa_zdjecia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
