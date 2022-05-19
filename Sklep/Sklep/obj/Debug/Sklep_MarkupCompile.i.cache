@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\jakub\Documents\GitHub\Projekt_Programowanie_Obiektowe_Jakub_Klis_13076\Sklep\Sklep\App.xaml
-1219584333
+10828372305
 2-970274685
-17-415902295
+261537781661
 29-1611125143
-MainWindow.xaml;
+MainWindow.xaml;Views\Dodawanie_dostawcy.xaml;Views\Dodawanie_producenta.xaml;Views\Dodawanie_produktu.xaml;Views\Edytowanie_dostawcy.xaml;Views\Edytowanie_producenta.xaml;Views\Edytowanie_produktu.xaml;Views\Usuwanie_dostawcy.xaml;Views\Usuwanie_producenta.xaml;Views\Usuwanie_produktu.xaml;
 
 False
 

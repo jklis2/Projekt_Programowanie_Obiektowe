@@ -56,3 +56,5 @@ C:\Users\jakub\Documents\GitHub\Projekt_Programowanie_Obiektowe_Jakub_Klis_13076
 C:\Users\jakub\Documents\GitHub\Projekt_Programowanie_Obiektowe_Jakub_Klis_13076\Sklep\Sklep\obj\Debug\Sklep.csproj.CopyComplete
 C:\Users\jakub\Documents\GitHub\Projekt_Programowanie_Obiektowe_Jakub_Klis_13076\Sklep\Sklep\obj\Debug\Sklep.exe
 C:\Users\jakub\Documents\GitHub\Projekt_Programowanie_Obiektowe_Jakub_Klis_13076\Sklep\Sklep\obj\Debug\Sklep.pdb
+C:\Users\jakub\Documents\GitHub\Projekt_Programowanie_Obiektowe_Jakub_Klis_13076\Sklep\Sklep\obj\Debug\Views\Dodawanie_produktu.baml
+C:\Users\jakub\Documents\GitHub\Projekt_Programowanie_Obiektowe_Jakub_Klis_13076\Sklep\Sklep\obj\Debug\Views\Dodawanie_produktu.g.cs

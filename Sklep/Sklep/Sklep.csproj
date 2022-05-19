@@ -72,6 +72,33 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Views\Dodawanie_dostawcy.xaml.cs">
+      <DependentUpon>Dodawanie_dostawcy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dodawanie_producenta.xaml.cs">
+      <DependentUpon>Dodawanie_producenta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dodawanie_produktu.xaml.cs">
+      <DependentUpon>Dodawanie_produktu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Edytowanie_dostawcy.xaml.cs">
+      <DependentUpon>Edytowanie_dostawcy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Edytowanie_producenta.xaml.cs">
+      <DependentUpon>Edytowanie_producenta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Edytowanie_produktu.xaml.cs">
+      <DependentUpon>Edytowanie_produktu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Usuwanie_dostawcy.xaml.cs">
+      <DependentUpon>Usuwanie_dostawcy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Usuwanie_producenta.xaml.cs">
+      <DependentUpon>Usuwanie_producenta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Usuwanie_produktu.xaml.cs">
+      <DependentUpon>Usuwanie_produktu.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -123,6 +150,42 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\Dodawanie_dostawcy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Dodawanie_producenta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Dodawanie_produktu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Edytowanie_dostawcy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Edytowanie_producenta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Edytowanie_produktu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Usuwanie_dostawcy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Usuwanie_producenta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Usuwanie_produktu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

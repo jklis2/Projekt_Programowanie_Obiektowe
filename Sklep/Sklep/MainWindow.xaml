@@ -9,20 +9,40 @@
     <Grid>
         <dxr:RibbonControl HorizontalAlignment="Stretch" RibbonStyle="Office2019" VerticalAlignment="Top">
             <dxr:RibbonDefaultPageCategory>
+                
                 <dxr:RibbonPage Caption="Produkty">
-                    <dxr:RibbonPageGroup Caption="Dodawanie_produktu">
+                    <dxr:RibbonPageGroup>
                         <dxb:BarButtonItem x:Name="Dodaj_produkt" Content="Dodaj produkt" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Add.svg}" RibbonStyle="Large"/>
                     </dxr:RibbonPageGroup>
-                    <dxr:RibbonPageGroup Caption="Usuwanie_produktu">
+                    <dxr:RibbonPageGroup>
+                        <dxb:BarButtonItem x:Name="Edytuj_produkt" Content="Edytuj produkt" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Edit.svg}" RibbonStyle="Large"/>
+                    </dxr:RibbonPageGroup>
+                    <dxr:RibbonPageGroup>
                         <dxb:BarButtonItem x:Name="Usun_produkt" Content="Usuń produkt" Glyph="{dx:DXImage SvgImages/HybridDemoIcons/BottomPanel/HybridDemo_Delete.svg}" RibbonStyle="Large"/>
                     </dxr:RibbonPageGroup>
                 </dxr:RibbonPage>
+                
                 <dxr:RibbonPage Caption="Dostawcy">
-                    <dxr:RibbonPageGroup Caption="Dodawanie_dostawcy">
+                    <dxr:RibbonPageGroup>
                         <dxb:BarButtonItem x:Name="Dodaj_dostawce" Content="Dodaj dostawcę" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Add.svg}" RibbonStyle="Large"/>
                     </dxr:RibbonPageGroup>
-                    <dxr:RibbonPageGroup Caption="Usuwanie_dostawcy">
+                    <dxr:RibbonPageGroup>
+                        <dxb:BarButtonItem x:Name="Edytuj_dostawcę" Content="Edytuj dostawcę" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Edit.svg}" RibbonStyle="Large"/>
+                    </dxr:RibbonPageGroup>
+                    <dxr:RibbonPageGroup>
                         <dxb:BarButtonItem x:Name="Usun_dostawce" Content="Usuń dostawcę" Glyph="{dx:DXImage SvgImages/HybridDemoIcons/BottomPanel/HybridDemo_Delete.svg}" RibbonStyle="Large"/>
+                    </dxr:RibbonPageGroup>
+                </dxr:RibbonPage>
+                
+                <dxr:RibbonPage Caption="Producenci">
+                    <dxr:RibbonPageGroup>
+                        <dxb:BarButtonItem x:Name="Dodaj_producenta" Content="Dodaj producenta" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Add.svg}" RibbonStyle="Large"/>
+                    </dxr:RibbonPageGroup>
+                    <dxr:RibbonPageGroup>
+                        <dxb:BarButtonItem x:Name="Edytuj_producenta" Content="Edytuj producenta" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Edit.svg}" RibbonStyle="Large"/>
+                    </dxr:RibbonPageGroup>
+                    <dxr:RibbonPageGroup>
+                        <dxb:BarButtonItem x:Name="Usun_producenta" Content="Usuń producenta" Glyph="{dx:DXImage SvgImages/HybridDemoIcons/BottomPanel/HybridDemo_Delete.svg}" RibbonStyle="Large"/>
                     </dxr:RibbonPageGroup>
                 </dxr:RibbonPage>
             
