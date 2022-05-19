@@ -11,38 +11,50 @@
             <dxr:RibbonDefaultPageCategory>
                 
                 <dxr:RibbonPage Caption="Produkty">
-                    <dxr:RibbonPageGroup>
-                        <dxb:BarButtonItem x:Name="Dodaj_produkt" Content="Dodaj produkt" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Add.svg}" RibbonStyle="Large"/>
+                    <dxr:RibbonPageGroup Caption="">
+                        <dxb:BarButtonItem x:Name="Dodaj_produkt" Content="Dodaj produkt" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Add.svg}" RibbonStyle="Large" ItemClick="Dodawanie_produktu_ItemClick"/>
                     </dxr:RibbonPageGroup>
-                    <dxr:RibbonPageGroup>
-                        <dxb:BarButtonItem x:Name="Edytuj_produkt" Content="Edytuj produkt" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Edit.svg}" RibbonStyle="Large"/>
+                    <dxr:RibbonPageGroup Caption="">
+                        <dxb:BarButtonItem x:Name="Edytuj_produkt" Content="Edytuj produkt" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Edit.svg}" RibbonStyle="Large" ItemClick="Edytowanie_produktu_ItemClick"/>
                     </dxr:RibbonPageGroup>
-                    <dxr:RibbonPageGroup>
-                        <dxb:BarButtonItem x:Name="Usun_produkt" Content="Usuń produkt" Glyph="{dx:DXImage SvgImages/HybridDemoIcons/BottomPanel/HybridDemo_Delete.svg}" RibbonStyle="Large"/>
+                    <dxr:RibbonPageGroup Caption="">
+                        <dxb:BarButtonItem x:Name="Usun_produkt" Content="Usuń produkt" Glyph="{dx:DXImage SvgImages/HybridDemoIcons/BottomPanel/HybridDemo_Delete.svg}" RibbonStyle="Large" ItemClick="Usuwanie_produktu_ItemClick"/>
                     </dxr:RibbonPageGroup>
                 </dxr:RibbonPage>
-                
+
+                <dxr:RibbonPage Caption="Kategorie">
+                    <dxr:RibbonPageGroup Caption="">
+                        <dxb:BarButtonItem x:Name="Dodaj_kategorie" Content="Dodaj kategorie" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Add.svg}" RibbonStyle="Large" ItemClick="Dodaj_kategorie_ItemClick"/>
+                    </dxr:RibbonPageGroup>
+                    <dxr:RibbonPageGroup Caption="">
+                        <dxb:BarButtonItem x:Name="Edytuj_kategorie" Content="Edytuj kategorie" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Edit.svg}" RibbonStyle="Large" ItemClick="Edytuj_kategorie_ItemClick"/>
+                    </dxr:RibbonPageGroup>
+                    <dxr:RibbonPageGroup Caption="">
+                        <dxb:BarButtonItem x:Name="Usun_kategorie" Content="Usuń kategorie" Glyph="{dx:DXImage SvgImages/HybridDemoIcons/BottomPanel/HybridDemo_Delete.svg}" RibbonStyle="Large" ItemClick="Usun_kategorie_ItemClick"/>
+                    </dxr:RibbonPageGroup>
+                </dxr:RibbonPage>
+
                 <dxr:RibbonPage Caption="Dostawcy">
-                    <dxr:RibbonPageGroup>
-                        <dxb:BarButtonItem x:Name="Dodaj_dostawce" Content="Dodaj dostawcę" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Add.svg}" RibbonStyle="Large"/>
+                    <dxr:RibbonPageGroup Caption="">
+                        <dxb:BarButtonItem x:Name="Dodaj_dostawce" Content="Dodaj dostawcę" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Add.svg}" RibbonStyle="Large" ItemClick="Dodaj_dostawce_ItemClick"/>
                     </dxr:RibbonPageGroup>
-                    <dxr:RibbonPageGroup>
-                        <dxb:BarButtonItem x:Name="Edytuj_dostawcę" Content="Edytuj dostawcę" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Edit.svg}" RibbonStyle="Large"/>
+                    <dxr:RibbonPageGroup Caption="">
+                        <dxb:BarButtonItem x:Name="Edytuj_dostawcę" Content="Edytuj dostawcę" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Edit.svg}" RibbonStyle="Large" ItemClick="Edytuj_dostawcę_ItemClick"/>
                     </dxr:RibbonPageGroup>
-                    <dxr:RibbonPageGroup>
-                        <dxb:BarButtonItem x:Name="Usun_dostawce" Content="Usuń dostawcę" Glyph="{dx:DXImage SvgImages/HybridDemoIcons/BottomPanel/HybridDemo_Delete.svg}" RibbonStyle="Large"/>
+                    <dxr:RibbonPageGroup Caption="">
+                        <dxb:BarButtonItem x:Name="Usun_dostawce" Content="Usuń dostawcę" Glyph="{dx:DXImage SvgImages/HybridDemoIcons/BottomPanel/HybridDemo_Delete.svg}" RibbonStyle="Large" ItemClick="Usun_dostawce_ItemClick"/>
                     </dxr:RibbonPageGroup>
                 </dxr:RibbonPage>
                 
                 <dxr:RibbonPage Caption="Producenci">
-                    <dxr:RibbonPageGroup>
-                        <dxb:BarButtonItem x:Name="Dodaj_producenta" Content="Dodaj producenta" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Add.svg}" RibbonStyle="Large"/>
+                    <dxr:RibbonPageGroup Caption="">
+                        <dxb:BarButtonItem x:Name="Dodaj_producenta" Content="Dodaj producenta" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Add.svg}" RibbonStyle="Large" ItemClick="Dodaj_producenta_ItemClick"/>
                     </dxr:RibbonPageGroup>
-                    <dxr:RibbonPageGroup>
-                        <dxb:BarButtonItem x:Name="Edytuj_producenta" Content="Edytuj producenta" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Edit.svg}" RibbonStyle="Large"/>
+                    <dxr:RibbonPageGroup Caption="">
+                        <dxb:BarButtonItem x:Name="Edytuj_producenta" Content="Edytuj producenta" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Edit.svg}" RibbonStyle="Large" ItemClick="Edytuj_producenta_ItemClick"/>
                     </dxr:RibbonPageGroup>
-                    <dxr:RibbonPageGroup>
-                        <dxb:BarButtonItem x:Name="Usun_producenta" Content="Usuń producenta" Glyph="{dx:DXImage SvgImages/HybridDemoIcons/BottomPanel/HybridDemo_Delete.svg}" RibbonStyle="Large"/>
+                    <dxr:RibbonPageGroup Caption="">
+                        <dxb:BarButtonItem x:Name="Usun_producenta" Content="Usuń producenta" Glyph="{dx:DXImage SvgImages/HybridDemoIcons/BottomPanel/HybridDemo_Delete.svg}" RibbonStyle="Large" ItemClick="Usun_producenta_ItemClick"/>
                     </dxr:RibbonPageGroup>
                 </dxr:RibbonPage>
             

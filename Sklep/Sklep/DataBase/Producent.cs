@@ -16,12 +16,12 @@ namespace Sklep.DataBase
     {
         public Producent()
         {
-            this.Kategoria_producent = new HashSet<Kategoria_producent>();
+            this.Produkt = new HashSet<Produkt>();
         }
     
         public int id_producenta { get; set; }
         public string nazwa_producenta { get; set; }
     
-        public virtual ICollection<Kategoria_producent> Kategoria_producent { get; set; }
+        public virtual ICollection<Produkt> Produkt { get; set; }
     }
 }

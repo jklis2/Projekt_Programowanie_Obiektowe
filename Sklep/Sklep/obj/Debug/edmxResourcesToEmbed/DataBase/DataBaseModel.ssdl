@@ -14,21 +14,6 @@
     <Property Name="id_kategorii" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nazwa_kategorii" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
-  <EntityType Name="Kategoria_producent">
-    <Key>
-      <PropertyRef Name="id_kategoria_producent" />
-    </Key>
-    <Property Name="id_kategoria_producent" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="id_producenta" Type="int" Nullable="false" />
-    <Property Name="id_kategorii" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Opis_produktu">
-    <Key>
-      <PropertyRef Name="id_opisu" />
-    </Key>
-    <Property Name="id_opisu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="opis" Type="text" Nullable="false" />
-  </EntityType>
   <EntityType Name="Producent">
     <Key>
       <PropertyRef Name="id_producenta" />
@@ -41,10 +26,10 @@
       <PropertyRef Name="id_produktu" />
     </Key>
     <Property Name="id_produktu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="id_kategoria_producent" Type="int" Nullable="false" />
+    <Property Name="id_producenta" Type="int" Nullable="false" />
+    <Property Name="id_kategorii" Type="int" Nullable="false" />
     <Property Name="id_dostawcy" Type="int" Nullable="false" />
-    <Property Name="id_zdjęcia" Type="int" Nullable="false" />
-    <Property Name="id_opisu" Type="int" Nullable="false" />
+    <Property Name="opis_produktu" Type="varchar" MaxLength="200" Nullable="false" />
     <Property Name="nazwa_produktu" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="ilosc_sztuk_w_sklepie" Type="int" Nullable="false" />
     <Property Name="cena" Type="decimal" Precision="10" Scale="2" Nullable="false" />
@@ -60,37 +45,6 @@
     <Property Name="version" Type="int" />
     <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
-  <EntityType Name="Zdjecie_produktu">
-    <Key>
-      <PropertyRef Name="id_zdjecia" />
-    </Key>
-    <Property Name="id_zdjecia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="nazwa_zdjecia" Type="varchar" MaxLength="50" Nullable="false" />
-  </EntityType>
-  <Association Name="FK_Kategoria_producent_Kategoria">
-    <End Role="Kategoria" Type="Self.Kategoria" Multiplicity="1" />
-    <End Role="Kategoria_producent" Type="Self.Kategoria_producent" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Kategoria">
-        <PropertyRef Name="id_kategorii" />
-      </Principal>
-      <Dependent Role="Kategoria_producent">
-        <PropertyRef Name="id_kategorii" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Kategoria_producent_Producent">
-    <End Role="Producent" Type="Self.Producent" Multiplicity="1" />
-    <End Role="Kategoria_producent" Type="Self.Kategoria_producent" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Producent">
-        <PropertyRef Name="id_producenta" />
-      </Principal>
-      <Dependent Role="Kategoria_producent">
-        <PropertyRef Name="id_producenta" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Produkt_Dostawca">
     <End Role="Dostawca" Type="Self.Dostawca" Multiplicity="1" />
     <End Role="Produkt" Type="Self.Produkt" Multiplicity="*" />
@@ -99,77 +53,50 @@
         <PropertyRef Name="id_dostawcy" />
       </Principal>
       <Dependent Role="Produkt">
-        <PropertyRef Name="id_zdjęcia" />
+        <PropertyRef Name="id_dostawcy" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Produkt_Kategoria_producent">
-    <End Role="Kategoria_producent" Type="Self.Kategoria_producent" Multiplicity="1" />
+  <Association Name="FK_Produkt_Kategoria">
+    <End Role="Kategoria" Type="Self.Kategoria" Multiplicity="1" />
     <End Role="Produkt" Type="Self.Produkt" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Kategoria_producent">
-        <PropertyRef Name="id_kategoria_producent" />
+      <Principal Role="Kategoria">
+        <PropertyRef Name="id_kategorii" />
       </Principal>
       <Dependent Role="Produkt">
-        <PropertyRef Name="id_kategoria_producent" />
+        <PropertyRef Name="id_kategorii" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Produkt_Opis_produktu">
-    <End Role="Opis_produktu" Type="Self.Opis_produktu" Multiplicity="1" />
+  <Association Name="FK_Produkt_Producent">
+    <End Role="Producent" Type="Self.Producent" Multiplicity="1" />
     <End Role="Produkt" Type="Self.Produkt" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Opis_produktu">
-        <PropertyRef Name="id_opisu" />
+      <Principal Role="Producent">
+        <PropertyRef Name="id_producenta" />
       </Principal>
       <Dependent Role="Produkt">
-        <PropertyRef Name="id_opisu" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Produkt_Zdjecie_produktu">
-    <End Role="Zdjecie_produktu" Type="Self.Zdjecie_produktu" Multiplicity="1" />
-    <End Role="Produkt" Type="Self.Produkt" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Zdjecie_produktu">
-        <PropertyRef Name="id_zdjecia" />
-      </Principal>
-      <Dependent Role="Produkt">
-        <PropertyRef Name="id_opisu" />
+        <PropertyRef Name="id_producenta" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="Asortyment_sklepuModelStoreContainer">
     <EntitySet Name="Dostawca" EntityType="Self.Dostawca" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Kategoria" EntityType="Self.Kategoria" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Kategoria_producent" EntityType="Self.Kategoria_producent" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Opis_produktu" EntityType="Self.Opis_produktu" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Producent" EntityType="Self.Producent" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Produkt" EntityType="Self.Produkt" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Zdjecie_produktu" EntityType="Self.Zdjecie_produktu" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_Kategoria_producent_Kategoria" Association="Self.FK_Kategoria_producent_Kategoria">
-      <End Role="Kategoria" EntitySet="Kategoria" />
-      <End Role="Kategoria_producent" EntitySet="Kategoria_producent" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Kategoria_producent_Producent" Association="Self.FK_Kategoria_producent_Producent">
-      <End Role="Producent" EntitySet="Producent" />
-      <End Role="Kategoria_producent" EntitySet="Kategoria_producent" />
-    </AssociationSet>
     <AssociationSet Name="FK_Produkt_Dostawca" Association="Self.FK_Produkt_Dostawca">
       <End Role="Dostawca" EntitySet="Dostawca" />
       <End Role="Produkt" EntitySet="Produkt" />
     </AssociationSet>
-    <AssociationSet Name="FK_Produkt_Kategoria_producent" Association="Self.FK_Produkt_Kategoria_producent">
-      <End Role="Kategoria_producent" EntitySet="Kategoria_producent" />
+    <AssociationSet Name="FK_Produkt_Kategoria" Association="Self.FK_Produkt_Kategoria">
+      <End Role="Kategoria" EntitySet="Kategoria" />
       <End Role="Produkt" EntitySet="Produkt" />
     </AssociationSet>
-    <AssociationSet Name="FK_Produkt_Opis_produktu" Association="Self.FK_Produkt_Opis_produktu">
-      <End Role="Opis_produktu" EntitySet="Opis_produktu" />
-      <End Role="Produkt" EntitySet="Produkt" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Produkt_Zdjecie_produktu" Association="Self.FK_Produkt_Zdjecie_produktu">
-      <End Role="Zdjecie_produktu" EntitySet="Zdjecie_produktu" />
+    <AssociationSet Name="FK_Produkt_Producent" Association="Self.FK_Produkt_Producent">
+      <End Role="Producent" EntitySet="Producent" />
       <End Role="Produkt" EntitySet="Produkt" />
     </AssociationSet>
   </EntityContainer>

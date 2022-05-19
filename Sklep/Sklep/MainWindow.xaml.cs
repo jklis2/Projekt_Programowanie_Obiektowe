@@ -1,4 +1,5 @@
 ﻿using DevExpress.Xpf.Core;
+using Sklep.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,9 +26,76 @@ namespace Sklep
             InitializeComponent();
         }
 
-        private void DodajPracownika(object sender, DevExpress.Xpf.Bars.ItemClickEventArgs e)
+        private void Dodawanie_produktu_ItemClick(object sender, DevExpress.Xpf.Bars.ItemClickEventArgs e)
         {
+            Dodawanie_produktu okno = new Dodawanie_produktu();
+            okno.ShowDialog();
+        }
 
+        private void Edytowanie_produktu_ItemClick(object sender, DevExpress.Xpf.Bars.ItemClickEventArgs e)
+        {
+            Edytowanie_produktu okno = new Edytowanie_produktu();
+            okno.ShowDialog();
+        }
+
+        private void Usuwanie_produktu_ItemClick(object sender, DevExpress.Xpf.Bars.ItemClickEventArgs e)
+        {
+            Usuwanie_produktu okno = new Usuwanie_produktu();
+            okno.ShowDialog();
+        }
+
+        private void Dodaj_dostawce_ItemClick(object sender, DevExpress.Xpf.Bars.ItemClickEventArgs e)
+        {
+            Dodawanie_dostawcy okno = new Dodawanie_dostawcy();
+            okno.ShowDialog();
+        }
+
+        private void Edytuj_dostawcę_ItemClick(object sender, DevExpress.Xpf.Bars.ItemClickEventArgs e)
+        {
+            Edytowanie_dostawcy okno = new Edytowanie_dostawcy();
+            okno.ShowDialog();
+        }
+
+        private void Usun_dostawce_ItemClick(object sender, DevExpress.Xpf.Bars.ItemClickEventArgs e)
+        {
+            Usuwanie_dostawcy okno = new Usuwanie_dostawcy();
+            okno.ShowDialog();
+        }
+
+        private void Dodaj_producenta_ItemClick(object sender, DevExpress.Xpf.Bars.ItemClickEventArgs e)
+        {
+            Dodawanie_producenta okno = new Dodawanie_producenta();
+            okno.ShowDialog();
+        }
+
+        private void Edytuj_producenta_ItemClick(object sender, DevExpress.Xpf.Bars.ItemClickEventArgs e)
+        {
+            Edytowanie_producenta okno = new Edytowanie_producenta();
+            okno.ShowDialog();
+        }
+
+        private void Usun_producenta_ItemClick(object sender, DevExpress.Xpf.Bars.ItemClickEventArgs e)
+        {
+            Usuwanie_producenta okno = new Usuwanie_producenta();
+            okno.ShowDialog();
+        }
+
+        private void Dodaj_kategorie_ItemClick(object sender, DevExpress.Xpf.Bars.ItemClickEventArgs e)
+        {
+            Dodawanie_kategorii okno = new Dodawanie_kategorii();
+            okno.ShowDialog();
+        }
+
+        private void Edytuj_kategorie_ItemClick(object sender, DevExpress.Xpf.Bars.ItemClickEventArgs e)
+        {
+            Edytowanie_kategorii okno = new Edytowanie_kategorii();
+            okno.ShowDialog();
+        }
+
+        private void Usun_kategorie_ItemClick(object sender, DevExpress.Xpf.Bars.ItemClickEventArgs e)
+        {
+            Usuwanie_kategorii okno = new Usuwanie_kategorii();
+            okno.ShowDialog();
         }
     }
 }

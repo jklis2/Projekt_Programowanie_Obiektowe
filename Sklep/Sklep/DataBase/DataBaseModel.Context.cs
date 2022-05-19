@@ -27,11 +27,8 @@ namespace Sklep.DataBase
     
         public DbSet<Dostawca> Dostawca { get; set; }
         public DbSet<Kategoria> Kategoria { get; set; }
-        public DbSet<Kategoria_producent> Kategoria_producent { get; set; }
-        public DbSet<Opis_produktu> Opis_produktu { get; set; }
         public DbSet<Producent> Producent { get; set; }
         public DbSet<Produkt> Produkt { get; set; }
         public DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public DbSet<Zdjecie_produktu> Zdjecie_produktu { get; set; }
     }
 }

@@ -15,18 +15,17 @@ namespace Sklep.DataBase
     public partial class Produkt
     {
         public int id_produktu { get; set; }
-        public int id_kategoria_producent { get; set; }
+        public int id_producenta { get; set; }
+        public int id_kategorii { get; set; }
         public int id_dostawcy { get; set; }
-        public int id_zdjęcia { get; set; }
-        public int id_opisu { get; set; }
+        public string opis_produktu { get; set; }
         public string nazwa_produktu { get; set; }
         public int ilosc_sztuk_w_sklepie { get; set; }
         public decimal cena { get; set; }
         public System.DateTime data_kolejnej_dostawy { get; set; }
     
+        public virtual Kategoria Kategoria { get; set; }
+        public virtual Producent Producent { get; set; }
         public virtual Dostawca Dostawca { get; set; }
-        public virtual Kategoria_producent Kategoria_producent { get; set; }
-        public virtual Opis_produktu Opis_produktu { get; set; }
-        public virtual Zdjecie_produktu Zdjecie_produktu { get; set; }
     }
 }
