@@ -7,6 +7,9 @@
     >
 
     <Grid>
+        <Label Content="Usuń kategorię:" HorizontalAlignment="Left" Margin="263,89,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <ComboBox x:Name="ComboBox_Kategoria" HorizontalAlignment="Left" Margin="391,89,0,0" VerticalAlignment="Top" Width="120" SelectedItem="{Binding id_kategorii}" DisplayMemberPath="nazwa_kategorii"/>
+        <dx:SimpleButton x:Name="Zapisz" Content="Zapisz" HorizontalAlignment="Left" Height="67" Margin="591,66,0,0" VerticalAlignment="Top" Width="143" Glyph="{dx:DXImage SvgImages/Save/Save.svg}" Click="Zapisz_Click"/>
 
     </Grid>
 </dx:ThemedWindow>

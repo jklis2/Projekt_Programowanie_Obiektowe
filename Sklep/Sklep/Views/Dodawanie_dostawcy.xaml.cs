@@ -13,7 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-
 namespace Sklep.Views
 {
     /// <summary>
@@ -36,8 +35,8 @@ namespace Sklep.Views
             };
 
             dbContext.Dostawca.Add(dostawca);
-            dbContext.SaveChanges();
 
+            dbContext.SaveChanges();
         }
 
         private void Zapisz_Click(object sender, RoutedEventArgs e)

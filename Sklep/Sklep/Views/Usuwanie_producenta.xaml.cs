@@ -13,7 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-
 namespace Sklep.Views
 {
     /// <summary>
@@ -22,6 +21,7 @@ namespace Sklep.Views
     public partial class Usuwanie_producenta : ThemedWindow
     {
         Asortyment_sklepuEntities dbContext = new Asortyment_sklepuEntities();
+
         public Usuwanie_producenta()
         {
             InitializeComponent();
@@ -32,7 +32,6 @@ namespace Sklep.Views
         public void Remove()
         {
             var nazwa_producenta_przyjscie = ComboBox_Producent.SelectedItem as Producent;
-
             var producent = dbContext.Producent.Find(nazwa_producenta_przyjscie.id_producenta);
             dbContext.Producent.Remove(producent);
             dbContext.SaveChanges();

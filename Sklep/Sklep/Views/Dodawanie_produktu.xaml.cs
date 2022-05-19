@@ -13,7 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-
 namespace Sklep.Views
 {
     /// <summary>
@@ -47,8 +46,11 @@ namespace Sklep.Views
 
             string ilosc_sztuk_w_sklepie_przyjscie = Ilosc_sztuk_w_sklepie_Text.Text;
             var ilosc_sztuk_w_sklepie = int.Parse(ilosc_sztuk_w_sklepie_przyjscie);
+
             var kategoria_produktu_przyjscie = Kategoria_produktu_Text.SelectedItem as Kategoria;
+
             var nazwa_producenta_przyjscie = Nazwa_producenta_Text.SelectedItem as Producent;
+
             var nazwa_dostawcy_przyjscie = Nazwa_dostawcy_Text.SelectedItem as Dostawca;
 
             Produkt produkt = new Produkt()
@@ -61,14 +63,11 @@ namespace Sklep.Views
                 cena = cena,
                 ilosc_sztuk_w_sklepie =ilosc_sztuk_w_sklepie,
                 data_kolejnej_dostawy = Data_kolejnej_dostawy_Text.DateTime,
-               
-                
             };
 
             dbContext.Produkt.Add(produkt);
+
             dbContext.SaveChanges();
-
-
         }
 
         private void Zapisz_Click(object sender, RoutedEventArgs e)
