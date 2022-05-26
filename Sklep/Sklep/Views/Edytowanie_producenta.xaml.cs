@@ -1,4 +1,5 @@
 ﻿using DevExpress.Xpf.Core;
+using Sklep.DataBase;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-
 namespace Sklep.Views
 {
     /// <summary>
@@ -20,9 +20,16 @@ namespace Sklep.Views
     /// </summary>
     public partial class Edytowanie_producenta : ThemedWindow
     {
+        Asortyment_sklepuEntities dbContext = new Asortyment_sklepuEntities();
+
         public Edytowanie_producenta()
         {
             InitializeComponent();
+        }
+
+        private void Zapisz_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

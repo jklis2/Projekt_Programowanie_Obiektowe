@@ -7,6 +7,15 @@
     >
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="89*"/>
+            <ColumnDefinition Width="161*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Wybierz kategorię:" HorizontalAlignment="Left" Margin="72,44,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Nowa nazwa:" HorizontalAlignment="Left" Margin="88,96,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="Nowa_nazwa_kategorii_Text" HorizontalAlignment="Left" Margin="192,96,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="ComboBox_wybierz_kategorie" HorizontalAlignment="Left" Margin="252,44,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <dx:SimpleButton x:Name="Zapisz" Grid.Column="1" Content="Zapisz" HorizontalAlignment="Left" Height="72" Margin="144,96,0,0" VerticalAlignment="Top" Width="149" Glyph="{dx:DXImage SvgImages/Save/Save.svg}" Click="Zapisz_Click"/>
 
     </Grid>
 </dx:ThemedWindow>

@@ -1,4 +1,5 @@
 ﻿using DevExpress.Xpf.Core;
+using Sklep.DataBase;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,9 +21,16 @@ namespace Sklep.Views
     /// </summary>
     public partial class Edytowanie_dostawcy : ThemedWindow
     {
+        Asortyment_sklepuEntities dbContext = new Asortyment_sklepuEntities();
+
         public Edytowanie_dostawcy()
         {
             InitializeComponent();
+        }
+
+        private void Zapisz_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

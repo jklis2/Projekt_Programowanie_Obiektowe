@@ -4,12 +4,13 @@
     xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
     xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon" 
     xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+    xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
     x:Class="Sklep.MainWindow"
     Title="MainWindow" Height="800" Width="1000">
     <Grid>
         <dxr:RibbonControl HorizontalAlignment="Stretch" RibbonStyle="Office2019" VerticalAlignment="Top">
             <dxr:RibbonDefaultPageCategory>
-                
+
                 <dxr:RibbonPage Caption="Produkty">
                     <dxr:RibbonPageGroup Caption="">
                         <dxb:BarButtonItem x:Name="Dodaj_produkt" Content="Dodaj produkt" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Add.svg}" RibbonStyle="Large" ItemClick="Dodawanie_produktu_ItemClick"/>
@@ -45,7 +46,7 @@
                         <dxb:BarButtonItem x:Name="Usun_dostawce" Content="Usuń dostawcę" Glyph="{dx:DXImage SvgImages/HybridDemoIcons/BottomPanel/HybridDemo_Delete.svg}" RibbonStyle="Large" ItemClick="Usun_dostawce_ItemClick"/>
                     </dxr:RibbonPageGroup>
                 </dxr:RibbonPage>
-                
+
                 <dxr:RibbonPage Caption="Producenci">
                     <dxr:RibbonPageGroup Caption="">
                         <dxb:BarButtonItem x:Name="Dodaj_producenta" Content="Dodaj producenta" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Add.svg}" RibbonStyle="Large" ItemClick="Dodaj_producenta_ItemClick"/>
@@ -57,8 +58,13 @@
                         <dxb:BarButtonItem x:Name="Usun_producenta" Content="Usuń producenta" Glyph="{dx:DXImage SvgImages/HybridDemoIcons/BottomPanel/HybridDemo_Delete.svg}" RibbonStyle="Large" ItemClick="Usun_producenta_ItemClick"/>
                     </dxr:RibbonPageGroup>
                 </dxr:RibbonPage>
-            
+
             </dxr:RibbonDefaultPageCategory>
         </dxr:RibbonControl>
+        <dxg:GridControl AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True" Margin="217,193,180,110">
+            <dxg:GridControl.View>
+                <dxg:TableView/>
+            </dxg:GridControl.View>
+        </dxg:GridControl>
     </Grid>
 </dx:ThemedWindow>

@@ -1,12 +1,18 @@
 ﻿<dx:ThemedWindow
-    x:Class="Sklep.Views.Edytowanie_dostawcy"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxdash="http://schemas.devexpress.com/winfx/2008/xaml/dashboard"
+    x:Class="Sklep.Views.Edytowanie_dostawcy"
     Title="Edytowanie_dostawcy" Height="800" Width="1000"
     >
 
     <Grid>
+        <Label Content="Wybierz dostawcę:" HorizontalAlignment="Left" Margin="174,72,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Nowa nazwa:" HorizontalAlignment="Left" Margin="174,121,0,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="0.039,0.384"/>
+        <TextBox x:Name="Nowa_nazwa_dostawcy_Text" HorizontalAlignment="Left" Margin="286,121,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="ComboBox_wybierz_dostawce" HorizontalAlignment="Left" Margin="332,72,0,0" VerticalAlignment="Top" Width="120"/>
+        <dx:SimpleButton x:Name="Zapisz" Content="Zapisz" HorizontalAlignment="Left" Margin="561,130,0,0" VerticalAlignment="Top" Width="161" Height="55" Glyph="{dx:DXImage SvgImages/Save/Save.svg}" Click="Zapisz_Click"/>
 
     </Grid>
 </dx:ThemedWindow>
