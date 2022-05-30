@@ -38,7 +38,7 @@ namespace Sklep.Views
         private void SetCheckBoxes()
         {
             Nazwa_produktu_Text1.ItemsSource = produktService.GetAll();
-            Kategoria_produktu_Text.ItemsSource = dostawcaService.GetAll();
+            Kategoria_produktu_Text.ItemsSource = kategoriaService.GetAll();
             Nazwa_producenta_Text.ItemsSource = producentService.GetAll();
             Nazwa_dostawcy_Text.ItemsSource = dostawcaService.GetAll();
         }
