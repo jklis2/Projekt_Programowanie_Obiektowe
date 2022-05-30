@@ -1,5 +1,6 @@
 ﻿using DevExpress.Xpf.Core;
 using Sklep.DataBase;
+using Sklep.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,9 @@ namespace Sklep.Views
     public partial class Dodawanie_produktu : ThemedWindow
     {
         Asortyment_sklepuEntities dbContext = new Asortyment_sklepuEntities();
+        DostawcaService dostawcaService = new DostawcaService();
+        ProduktService produktService = new ProduktService();
+
         public Dodawanie_produktu()
         {
             InitializeComponent();
@@ -36,7 +40,7 @@ namespace Sklep.Views
         {
             Kategoria_produktu_Text.ItemsSource = dbContext.Kategoria.ToList();
             Nazwa_producenta_Text.ItemsSource = dbContext.Producent.ToList();
-            Nazwa_dostawcy_Text.ItemsSource = dbContext.Dostawca.ToList();
+            Nazwa_dostawcy_Text.ItemsSource = dostawcaService.GetAll();
         }
 
         private void Save()
@@ -65,9 +69,7 @@ namespace Sklep.Views
                 data_kolejnej_dostawy = Data_kolejnej_dostawy_Text.DateTime,
             };
 
-            dbContext.Produkt.Add(produkt);
-
-            dbContext.SaveChanges();
+            produktService.Add(produkt);
         }
 
         private void Zapisz_Click(object sender, RoutedEventArgs e)

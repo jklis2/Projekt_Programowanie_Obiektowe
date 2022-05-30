@@ -1,5 +1,6 @@
 ﻿using DevExpress.Xpf.Core;
 using Sklep.DataBase;
+using Sklep.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,21 +21,19 @@ namespace Sklep.Views
     /// </summary>
     public partial class Usuwanie_produktu : ThemedWindow
     {
-        Asortyment_sklepuEntities dbContext = new Asortyment_sklepuEntities();
+        ProduktService produktService = new ProduktService();
 
         public Usuwanie_produktu()
         {
             InitializeComponent();
 
-            ComboBox_Produkt.ItemsSource = dbContext.Produkt.ToList();
+            ComboBox_Produkt.ItemsSource = produktService.GetAll();
         }
 
         public void Remove()
         {
             var nazwa_produktu_przyjscie = ComboBox_Produkt.SelectedItem as Produkt;
-            var produkt = dbContext.Produkt.Find(nazwa_produktu_przyjscie.id_produktu);
-            dbContext.Produkt.Remove(produkt);
-            dbContext.SaveChanges();
+            produktService.Remove(nazwa_produktu_przyjscie.id_produktu);
         }
 
         private void Zapisz_Click(object sender, RoutedEventArgs e)
