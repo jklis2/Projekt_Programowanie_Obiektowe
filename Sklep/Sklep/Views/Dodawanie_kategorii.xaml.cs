@@ -1,5 +1,6 @@
 ﻿using DevExpress.Xpf.Core;
 using Sklep.DataBase;
+using Sklep.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace Sklep.Views
     /// </summary>
     public partial class Dodawanie_kategorii : ThemedWindow
     {
-        Asortyment_sklepuEntities dbContext = new Asortyment_sklepuEntities();
+        KategoriaService kategoriaService = new KategoriaService();
 
         public Dodawanie_kategorii()
         {
@@ -33,10 +34,7 @@ namespace Sklep.Views
             {
                 nazwa_kategorii = Nazwa_kategorii_Text.Text,
             };
-
-            dbContext.Kategoria.Add(kategoria);
-
-            dbContext.SaveChanges();
+            kategoriaService.Add(kategoria);
         }
 
         private void Zapisz_Click(object sender, RoutedEventArgs e)

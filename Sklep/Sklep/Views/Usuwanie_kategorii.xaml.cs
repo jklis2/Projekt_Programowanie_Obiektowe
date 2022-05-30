@@ -1,5 +1,6 @@
 ﻿using DevExpress.Xpf.Core;
 using Sklep.DataBase;
+using Sklep.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,21 +21,19 @@ namespace Sklep.Views
     /// </summary>
     public partial class Usuwanie_kategorii : ThemedWindow
     {
-        Asortyment_sklepuEntities dbContext = new Asortyment_sklepuEntities();
+        KategoriaService kategoriaService = new KategoriaService();
 
         public Usuwanie_kategorii()
         {
             InitializeComponent();
 
-            ComboBox_Kategoria.ItemsSource = dbContext.Kategoria.ToList();
+            ComboBox_Kategoria.ItemsSource = kategoriaService.GetAll();
         }
 
         public void Remove()
         {
             var nazwa_kategorii_przyjscie = ComboBox_Kategoria.SelectedItem as Kategoria;
-            var kategoria = dbContext.Kategoria.Find(nazwa_kategorii_przyjscie.id_kategorii);
-            dbContext.Kategoria.Remove(kategoria);
-            dbContext.SaveChanges();
+            kategoriaService.Remove(nazwa_kategorii_przyjscie.id_kategorii);
         }
 
         private void Zapisz_Click(object sender, RoutedEventArgs e)

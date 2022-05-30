@@ -25,6 +25,7 @@ namespace Sklep.Views
         Asortyment_sklepuEntities dbContext = new Asortyment_sklepuEntities();
         DostawcaService dostawcaService = new DostawcaService();
         ProduktService produktService = new ProduktService();
+        KategoriaService kategoriaService = new KategoriaService();
 
         public Edytowanie_produktu()
         {
@@ -36,7 +37,7 @@ namespace Sklep.Views
         private void SetCheckBoxes()
         {
             Nazwa_produktu_Text1.ItemsSource = produktService.GetAll();
-            Kategoria_produktu_Text.ItemsSource = dbContext.Kategoria.ToList();
+            Kategoria_produktu_Text.ItemsSource = dostawcaService.GetAll();
             Nazwa_producenta_Text.ItemsSource = dbContext.Producent.ToList();
             Nazwa_dostawcy_Text.ItemsSource = dostawcaService.GetAll();
         }
