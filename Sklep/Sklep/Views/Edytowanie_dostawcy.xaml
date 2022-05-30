@@ -11,7 +11,7 @@
         <Label Content="Wybierz dostawcę:" HorizontalAlignment="Left" Margin="174,72,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Nowa nazwa:" HorizontalAlignment="Left" Margin="174,121,0,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="0.039,0.384"/>
         <TextBox x:Name="Nowa_nazwa_dostawcy_Text" HorizontalAlignment="Left" Margin="286,121,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="ComboBox_wybierz_dostawce" HorizontalAlignment="Left" Margin="332,72,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="ComboBox_wybierz_dostawce" HorizontalAlignment="Left" Margin="332,72,0,0" VerticalAlignment="Top" Width="120" SelectedItem="{Binding id_dostawcy}" DisplayMemberPath="nazwa_dostawcy" SelectionChanged="ComboBox_wybierz_dostawce_SelectionChanged"/>
         <dx:SimpleButton x:Name="Zapisz" Content="Zapisz" HorizontalAlignment="Left" Margin="561,130,0,0" VerticalAlignment="Top" Width="161" Height="55" Glyph="{dx:DXImage SvgImages/Save/Save.svg}" Click="Zapisz_Click"/>
 
     </Grid>

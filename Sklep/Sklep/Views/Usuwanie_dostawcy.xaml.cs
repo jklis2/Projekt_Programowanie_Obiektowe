@@ -1,5 +1,6 @@
 ﻿using DevExpress.Xpf.Core;
 using Sklep.DataBase;
+using Sklep.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,21 +21,20 @@ namespace Sklep.Views
     /// </summary>
     public partial class Usuwanie_dostawcy : ThemedWindow
     {
-        Asortyment_sklepuEntities dbContext = new Asortyment_sklepuEntities();
+        DostawcaService service = new DostawcaService();
 
         public Usuwanie_dostawcy()
         {
             InitializeComponent();
 
-            ComboBox_Dostawca.ItemsSource = dbContext.Dostawca.ToList();
+            ComboBox_Dostawca.ItemsSource = service.GetAll();
         }
 
         public void Remove()
         {
             var nazwa_dostawcy_przyjscie = ComboBox_Dostawca.SelectedItem as Dostawca;
-            var dostawca = dbContext.Dostawca.Find(nazwa_dostawcy_przyjscie.id_dostawcy);
-            dbContext.Dostawca.Remove(dostawca);
-            dbContext.SaveChanges();
+
+            service.Remove(nazwa_dostawcy_przyjscie.id_dostawcy);
         }
 
         private void Zapisz_Click(object sender, RoutedEventArgs e)

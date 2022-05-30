@@ -1,5 +1,6 @@
 ﻿using DevExpress.Xpf.Core;
 using Sklep.DataBase;
+using Sklep.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace Sklep.Views
     /// </summary>
     public partial class Dodawanie_dostawcy : ThemedWindow
     {
-        Asortyment_sklepuEntities dbContext = new Asortyment_sklepuEntities();
+        DostawcaService service = new DostawcaService();
 
         public Dodawanie_dostawcy()
         {
@@ -33,10 +34,7 @@ namespace Sklep.Views
             {
                 nazwa_dostawcy = Nazwa_dostawcy_Text.Text,
             };
-
-            dbContext.Dostawca.Add(dostawca);
-
-            dbContext.SaveChanges();
+            service.Add(dostawca);
         }
 
         private void Zapisz_Click(object sender, RoutedEventArgs e)

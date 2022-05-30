@@ -122,6 +122,7 @@
     <Compile Include="DataBase\sysdiagrams.cs">
       <DependentUpon>DataBaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Services\DostawcaService.cs" />
     <Compile Include="Views\Dodawanie_dostawcy.xaml.cs">
       <DependentUpon>Dodawanie_dostawcy.xaml</DependentUpon>
     </Compile>
