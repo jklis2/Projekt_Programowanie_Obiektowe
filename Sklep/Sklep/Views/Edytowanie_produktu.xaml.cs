@@ -26,6 +26,7 @@ namespace Sklep.Views
         DostawcaService dostawcaService = new DostawcaService();
         ProduktService produktService = new ProduktService();
         KategoriaService kategoriaService = new KategoriaService();
+        ProducentService producentService = new ProducentService();
 
         public Edytowanie_produktu()
         {
@@ -38,7 +39,7 @@ namespace Sklep.Views
         {
             Nazwa_produktu_Text1.ItemsSource = produktService.GetAll();
             Kategoria_produktu_Text.ItemsSource = dostawcaService.GetAll();
-            Nazwa_producenta_Text.ItemsSource = dbContext.Producent.ToList();
+            Nazwa_producenta_Text.ItemsSource = producentService.GetAll();
             Nazwa_dostawcy_Text.ItemsSource = dostawcaService.GetAll();
         }
 

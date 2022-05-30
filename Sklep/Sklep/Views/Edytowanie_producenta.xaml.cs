@@ -1,5 +1,6 @@
 ﻿using DevExpress.Xpf.Core;
 using Sklep.DataBase;
+using Sklep.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,16 +21,42 @@ namespace Sklep.Views
     /// </summary>
     public partial class Edytowanie_producenta : ThemedWindow
     {
-        Asortyment_sklepuEntities dbContext = new Asortyment_sklepuEntities();
+        ProducentService service = new ProducentService();
+
+        private int ProducentID { get; set; }
 
         public Edytowanie_producenta()
         {
             InitializeComponent();
+            ComboBox_wybierz_producenta.ItemsSource = service.GetAll();
+        }
+
+        private void Edit()
+        {
+            Producent producent = new Producent()
+            {
+                id_producenta = ProducentID,
+                nazwa_producenta = Nowa_nazwa_producenta_Text.Text
+            };
+            service.Edit(producent);
+        }
+
+        private void ComboBox_wybierz_producenta_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var selectedValue = ComboBox_wybierz_producenta.SelectedValue as Producent;
+
+            if (selectedValue != null)
+            {
+
+                Nowa_nazwa_producenta_Text.Text = selectedValue.nazwa_producenta;
+                ProducentID = selectedValue.id_producenta;
+            }
         }
 
         private void Zapisz_Click(object sender, RoutedEventArgs e)
         {
-
+            Edit();
+            this.Close();
         }
     }
 }

@@ -12,8 +12,7 @@
         <Label Content="Nowa nazwa:" HorizontalAlignment="Left" Margin="101,126,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Wybierz producenta:" HorizontalAlignment="Left" Margin="79,79,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <TextBox x:Name="Nowa_nazwa_producenta_Text" HorizontalAlignment="Left" Margin="193,126,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-
-        <dxe:ComboBoxEdit x:Name="ComboBox_wybierz_producenta" HorizontalAlignment="Left" Margin="220,79,0,0" VerticalAlignment="Top" Width="93"/>
+        <ComboBox x:Name="ComboBox_wybierz_producenta" HorizontalAlignment="Left" Margin="242,79,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_wybierz_producenta_SelectionChanged" SelectedItem="{Binding id_producenta}" DisplayMemberPath="nazwa_producenta"/>
 
     </Grid>
 </dx:ThemedWindow>

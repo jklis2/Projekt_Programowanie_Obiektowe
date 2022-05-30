@@ -25,6 +25,7 @@ namespace Sklep.Views
         DostawcaService dostawcaService = new DostawcaService();
         ProduktService produktService = new ProduktService();
         KategoriaService kategoriaService = new KategoriaService();
+        ProducentService producentService = new ProducentService();
 
         public Dodawanie_produktu()
         {
@@ -40,7 +41,7 @@ namespace Sklep.Views
         private void SetCheckBoxes()
         {
             Kategoria_produktu_Text.ItemsSource = kategoriaService.GetAll();
-            Nazwa_producenta_Text.ItemsSource = dbContext.Producent.ToList();
+            Nazwa_producenta_Text.ItemsSource = producentService.GetAll();
             Nazwa_dostawcy_Text.ItemsSource = dostawcaService.GetAll();
         }
 

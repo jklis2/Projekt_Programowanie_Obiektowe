@@ -1,5 +1,6 @@
 ﻿using DevExpress.Xpf.Core;
 using Sklep.DataBase;
+using Sklep.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace Sklep.Views
     /// </summary>
     public partial class Dodawanie_producenta : ThemedWindow
     {
-        Asortyment_sklepuEntities dbContext = new Asortyment_sklepuEntities();
+        ProducentService service = new ProducentService();
 
         public Dodawanie_producenta()
         {
@@ -33,10 +34,7 @@ namespace Sklep.Views
             { 
                 nazwa_producenta = Nazwa_producenta_Text.Text,
             };
-
-            dbContext.Producent.Add(producent);
-
-            dbContext.SaveChanges();
+            service.Add(producent);
         }
 
         private void Zapisz_Click(object sender, RoutedEventArgs e)

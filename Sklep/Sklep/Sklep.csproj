@@ -124,6 +124,7 @@
     </Compile>
     <Compile Include="Services\DostawcaService.cs" />
     <Compile Include="Services\KategoriaService.cs" />
+    <Compile Include="Services\ProducentService.cs" />
     <Compile Include="Services\ProduktService.cs" />
     <Compile Include="Views\Dodawanie_dostawcy.xaml.cs">
       <DependentUpon>Dodawanie_dostawcy.xaml</DependentUpon>
