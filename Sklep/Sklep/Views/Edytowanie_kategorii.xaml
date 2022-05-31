@@ -3,19 +3,18 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
-    Title="Edytowanie_kategorii" Height="800" Width="1000"
+    Title="Edytowanie_kategorii" Height="504" Width="506"
     >
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="253*"/>
-            <ColumnDefinition Width="247*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Label Content="Wybierz kategorię:" HorizontalAlignment="Left" Margin="72,44,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Content="Nowa nazwa:" HorizontalAlignment="Left" Margin="88,96,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="Nowa_nazwa_kategorii_Text" HorizontalAlignment="Left" Margin="192,96,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="ComboBox_wybierz_kategorie" HorizontalAlignment="Left" Margin="252,44,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_wybierz_kategorie_SelectionChanged" SelectedItem="{Binding id_kategorii}" DisplayMemberPath="nazwa_kategorii"/>
-        <dx:SimpleButton x:Name="Zapisz" Content="Zapisz" HorizontalAlignment="Left" Height="72" Margin="500,96,0,0" VerticalAlignment="Top" Width="149" Glyph="{dx:DXImage SvgImages/Save/Save.svg}" Click="Zapisz_Click" Grid.ColumnSpan="2"/>
+        <Label Content="Wybierz kategorię:" HorizontalAlignment="Left" Margin="10,19,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Nowa nazwa:" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="Nowa_nazwa_kategorii_Text" HorizontalAlignment="Left" Margin="90,58,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="ComboBox_wybierz_kategorie" HorizontalAlignment="Left" Margin="125,19,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_wybierz_kategorie_SelectionChanged" SelectedItem="{Binding id_kategorii}" DisplayMemberPath="nazwa_kategorii"/>
+        <dx:SimpleButton x:Name="Zapisz" Content="Zapisz" HorizontalAlignment="Left" Height="50" Margin="326,30,0,0" VerticalAlignment="Top" Width="125" Glyph="{dx:DXImage SvgImages/Save/Save.svg}" Click="Zapisz_Click"/>
 
     </Grid>
 </dx:ThemedWindow>

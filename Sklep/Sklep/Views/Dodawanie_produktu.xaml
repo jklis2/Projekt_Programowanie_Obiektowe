@@ -9,22 +9,22 @@
 
     <Grid>
         <Label Content="Nazwa produktu:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="Nazwa_produktu_Text" HorizontalAlignment="Left" Margin="122,14,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="501"/>
+        <TextBox x:Name="Nazwa_produktu_Text" HorizontalAlignment="Left" Margin="112,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="465"/>
         <Label Content="Opis produktu:" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Cena produktu:" HorizontalAlignment="Left" Margin="10,119,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Content="Ilość sztuk w sklepie:" HorizontalAlignment="Left" Margin="10,151,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Content="Data kolejnej dostawy:" HorizontalAlignment="Left" Margin="10,180,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="Cena_produktu_Text" HorizontalAlignment="Left" Margin="110,123,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="Ilosc_sztuk_w_sklepie_Text" HorizontalAlignment="Left" Margin="143,155,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="Opis_produktu_Text" HorizontalAlignment="Left" Margin="110,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="878"/>
-        <dxe:DateEdit x:Name="Data_kolejnej_dostawy_Text" HorizontalAlignment="Left" Margin="153,182,0,0" VerticalAlignment="Top" Height="22" Width="109"/>
+        <Label Content="Ilość sztuk w sklepie:" HorizontalAlignment="Left" Margin="10,155,0,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="0.488,0.494"/>
+        <Label Content="Data kolejnej dostawy:" HorizontalAlignment="Left" Margin="10,188,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="Cena_produktu_Text" HorizontalAlignment="Left" Margin="102,119,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="Ilosc_sztuk_w_sklepie_Text" HorizontalAlignment="Left" Margin="132,155,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Opis_produktu_Text" HorizontalAlignment="Left" Margin="100,46,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="878"/>
+        <dxe:DateEdit x:Name="Data_kolejnej_dostawy_Text" HorizontalAlignment="Left" Margin="143,188,0,0" VerticalAlignment="Top" Height="22" Width="109"/>
         <Label Content="Kategoria produktu:" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <ComboBox x:Name="Kategoria_produktu_Text" HorizontalAlignment="Left" Margin="143,86,0,0" VerticalAlignment="Top" Width="120" SelectedItem="{Binding id_kategorii}" DisplayMemberPath="nazwa_kategorii"/>
-        <dx:SimpleButton x:Name="Zapisz" Content="Zapisz" HorizontalAlignment="Left" Margin="435,142,0,0" VerticalAlignment="Top" Width="114" Glyph="{dx:DXImage SvgImages/Save/Save.svg}" Click="Zapisz_Click"/>
-        <Label Content="Nazwa producenta:" HorizontalAlignment="Left" Margin="19,224,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <ComboBox x:Name="Nazwa_producenta_Text" HorizontalAlignment="Left" Margin="153,230,0,0" VerticalAlignment="Top" Width="120" SelectedItem="{Binding id_producenta}" DisplayMemberPath="nazwa_producenta"/>
-        <Label Content="Nazwa dostawcy:" HorizontalAlignment="Left" Margin="29,280,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <ComboBox x:Name="Nazwa_dostawcy_Text" HorizontalAlignment="Left" Margin="168,280,0,0" VerticalAlignment="Top" Width="120" SelectedItem="{Binding id_dostawcy}" DisplayMemberPath="nazwa_dostawcy"/>
+        <ComboBox x:Name="Kategoria_produktu_Text" HorizontalAlignment="Left" Margin="129,84,0,0" VerticalAlignment="Top" Width="120" SelectedItem="{Binding id_kategorii}" DisplayMemberPath="nazwa_kategorii"/>
+        <dx:SimpleButton x:Name="Zapisz" Content="Zapisz" HorizontalAlignment="Left" Margin="864,246,0,0" VerticalAlignment="Top" Width="114" Glyph="{dx:DXImage SvgImages/Save/Save.svg}" Click="Zapisz_Click"/>
+        <Label Content="Nazwa producenta:" HorizontalAlignment="Left" Margin="10,225,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <ComboBox x:Name="Nazwa_producenta_Text" HorizontalAlignment="Left" Margin="124,225,0,0" VerticalAlignment="Top" Width="120" SelectedItem="{Binding id_producenta}" DisplayMemberPath="nazwa_producenta"/>
+        <Label Content="Nazwa dostawcy:" HorizontalAlignment="Left" Margin="10,264,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <ComboBox x:Name="Nazwa_dostawcy_Text" HorizontalAlignment="Left" Margin="112,264,0,0" VerticalAlignment="Top" Width="120" SelectedItem="{Binding id_dostawcy}" DisplayMemberPath="nazwa_dostawcy"/>
 
     </Grid>
 </dx:ThemedWindow>

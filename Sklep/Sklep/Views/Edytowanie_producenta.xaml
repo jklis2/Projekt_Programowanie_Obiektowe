@@ -4,15 +4,15 @@
     xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
     xmlns:dxdash="http://schemas.devexpress.com/winfx/2008/xaml/dashboard" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
     x:Class="Sklep.Views.Edytowanie_producenta"
-    Title="Edytowanie_producenta" Height="800" Width="1000"
+    Title="Edytowanie_producenta" Height="503" Width="501"
     >
 
     <Grid>
-        <dx:SimpleButton x:Name="Zapisz" HorizontalAlignment="Left" Height="102" Margin="435,64,0,0" VerticalAlignment="Top" Width="178" Glyph="{dx:DXImage SvgImages/Save/Save.svg}" Click="Zapisz_Click" Content="Zapisz"/>
-        <Label Content="Nowa nazwa:" HorizontalAlignment="Left" Margin="101,126,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Content="Wybierz producenta:" HorizontalAlignment="Left" Margin="79,79,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="Nowa_nazwa_producenta_Text" HorizontalAlignment="Left" Margin="193,126,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="ComboBox_wybierz_producenta" HorizontalAlignment="Left" Margin="242,79,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_wybierz_producenta_SelectionChanged" SelectedItem="{Binding id_producenta}" DisplayMemberPath="nazwa_producenta"/>
+        <dx:SimpleButton x:Name="Zapisz" HorizontalAlignment="Left" Height="51" Margin="315,31,0,0" VerticalAlignment="Top" Width="120" Glyph="{dx:DXImage SvgImages/Save/Save.svg}" Click="Zapisz_Click" Content="Zapisz"/>
+        <Label Content="Nowa nazwa:" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Wybierz producenta:" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="Nowa_nazwa_producenta_Text" HorizontalAlignment="Left" Margin="90,60,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="ComboBox_wybierz_producenta" HorizontalAlignment="Left" Margin="133,20,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_wybierz_producenta_SelectionChanged" SelectedItem="{Binding id_producenta}" DisplayMemberPath="nazwa_producenta"/>
 
     </Grid>
 </dx:ThemedWindow>

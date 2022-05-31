@@ -4,15 +4,15 @@
     xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
     xmlns:dxdash="http://schemas.devexpress.com/winfx/2008/xaml/dashboard"
     x:Class="Sklep.Views.Edytowanie_dostawcy"
-    Title="Edytowanie_dostawcy" Height="800" Width="1000"
+    Title="Edytowanie_dostawcy" Height="483" Width="508"
     >
 
     <Grid>
-        <Label Content="Wybierz dostawcę:" HorizontalAlignment="Left" Margin="174,72,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Content="Nowa nazwa:" HorizontalAlignment="Left" Margin="174,121,0,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="0.039,0.384"/>
-        <TextBox x:Name="Nowa_nazwa_dostawcy_Text" HorizontalAlignment="Left" Margin="286,121,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="ComboBox_wybierz_dostawce" HorizontalAlignment="Left" Margin="332,72,0,0" VerticalAlignment="Top" Width="120" SelectedItem="{Binding id_dostawcy}" DisplayMemberPath="nazwa_dostawcy" SelectionChanged="ComboBox_wybierz_dostawce_SelectionChanged"/>
-        <dx:SimpleButton x:Name="Zapisz" Content="Zapisz" HorizontalAlignment="Left" Margin="561,130,0,0" VerticalAlignment="Top" Width="161" Height="55" Glyph="{dx:DXImage SvgImages/Save/Save.svg}" Click="Zapisz_Click"/>
+        <Label Content="Wybierz dostawcę:" HorizontalAlignment="Left" Margin="21,26,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Nowa nazwa:" HorizontalAlignment="Left" Margin="21,61,0,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="0.039,0.384"/>
+        <TextBox x:Name="Nowa_nazwa_dostawcy_Text" HorizontalAlignment="Left" Margin="101,61,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="ComboBox_wybierz_dostawce" HorizontalAlignment="Left" Margin="132,26,0,0" VerticalAlignment="Top" Width="120" SelectedItem="{Binding id_dostawcy}" DisplayMemberPath="nazwa_dostawcy" SelectionChanged="ComboBox_wybierz_dostawce_SelectionChanged"/>
+        <dx:SimpleButton x:Name="Zapisz" Content="Zapisz" HorizontalAlignment="Left" Margin="333,37,0,0" VerticalAlignment="Top" Width="114" Height="35" Glyph="{dx:DXImage SvgImages/Save/Save.svg}" Click="Zapisz_Click"/>
 
     </Grid>
 </dx:ThemedWindow>
