@@ -1,4 +1,5 @@
 ﻿using DevExpress.Xpf.Core;
+using Sklep.DataBase;
 using Sklep.Views;
 using System;
 using System.Collections.Generic;
@@ -21,9 +22,16 @@ namespace Sklep
     /// </summary>
     public partial class MainWindow : ThemedWindow
     {
+        Asortyment_sklepuEntities dbContext = new Asortyment_sklepuEntities();
+
         public MainWindow()
         {
             InitializeComponent();
+
+            GridControlProdukty.ItemsSource = dbContext.Produkt.ToList();
+            GridControlProducenci.ItemsSource = dbContext.Producent.ToList();
+            GridControlDostawcy.ItemsSource = dbContext.Dostawca.ToList();
+            GridControlKategorie.ItemsSource = dbContext.Kategoria.ToList();
         }
 
         private void Dodawanie_produktu_ItemClick(object sender, DevExpress.Xpf.Bars.ItemClickEventArgs e)
@@ -96,6 +104,19 @@ namespace Sklep
         {
             Usuwanie_kategorii okno = new Usuwanie_kategorii();
             okno.ShowDialog();
+        }
+
+        private void Odśwież_ItemClick(object sender, DevExpress.Xpf.Bars.ItemClickEventArgs e)
+        {
+            GridControlProdukty.ItemsSource = dbContext.Produkt.ToList();
+            GridControlProducenci.ItemsSource = dbContext.Producent.ToList();
+            GridControlDostawcy.ItemsSource = dbContext.Dostawca.ToList();
+            GridControlKategorie.ItemsSource = dbContext.Kategoria.ToList();
+
+            GridControlProdukty.RefreshData();
+            GridControlProducenci.RefreshData();
+            GridControlDostawcy.RefreshData();
+            GridControlKategorie.RefreshData();
         }
     }
 }

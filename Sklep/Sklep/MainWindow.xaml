@@ -9,7 +9,7 @@
     x:Class="Sklep.MainWindow"
     Title="MainWindow" Height="825" Width="1000" Icon="{dx:DXImage SvgImages/Icon Builder/Shopping_Store.svg}">
     <Grid>
-        <dxr:RibbonControl RibbonStyle="Office2019" Height="153">
+        <dxr:RibbonControl RibbonStyle="Office2019" Height="153" ShowApplicationButton="False">
             <dxr:RibbonDefaultPageCategory>
 
                 <dxr:RibbonPage Caption="Produkty">
@@ -21,6 +21,9 @@
                     </dxr:RibbonPageGroup>
                     <dxr:RibbonPageGroup Caption="">
                         <dxb:BarButtonItem x:Name="Usun_produkt" Content="Usuń produkt" Glyph="{dx:DXImage SvgImages/HybridDemoIcons/BottomPanel/HybridDemo_Delete.svg}" RibbonStyle="Large" ItemClick="Usuwanie_produktu_ItemClick"/>
+                    </dxr:RibbonPageGroup>
+                    <dxr:RibbonPageGroup Caption="">
+                        <dxb:BarButtonItem x:Name="Odśwież_produkt" Content="Odśwież produkt" Glyph="{dx:DXImage SvgImages/Spreadsheet/RefreshPivotTable.svg}" RibbonStyle="Large" ItemClick="Odśwież_ItemClick"/>
                     </dxr:RibbonPageGroup>
                 </dxr:RibbonPage>
 
@@ -34,6 +37,9 @@
                     <dxr:RibbonPageGroup Caption="">
                         <dxb:BarButtonItem x:Name="Usun_kategorie" Content="Usuń kategorie" Glyph="{dx:DXImage SvgImages/HybridDemoIcons/BottomPanel/HybridDemo_Delete.svg}" RibbonStyle="Large" ItemClick="Usun_kategorie_ItemClick"/>
                     </dxr:RibbonPageGroup>
+                    <dxr:RibbonPageGroup Caption="">
+                        <dxb:BarButtonItem x:Name="Odśwież_kategorie" Content="Odśwież kategorie" Glyph="{dx:DXImage SvgImages/Spreadsheet/RefreshPivotTable.svg}" RibbonStyle="Large" ItemClick="Odśwież_ItemClick"/>
+                    </dxr:RibbonPageGroup>
                 </dxr:RibbonPage>
 
                 <dxr:RibbonPage Caption="Dostawcy">
@@ -45,6 +51,9 @@
                     </dxr:RibbonPageGroup>
                     <dxr:RibbonPageGroup Caption="">
                         <dxb:BarButtonItem x:Name="Usun_dostawce" Content="Usuń dostawcę" Glyph="{dx:DXImage SvgImages/HybridDemoIcons/BottomPanel/HybridDemo_Delete.svg}" RibbonStyle="Large" ItemClick="Usun_dostawce_ItemClick"/>
+                    </dxr:RibbonPageGroup>
+                    <dxr:RibbonPageGroup Caption="">
+                        <dxb:BarButtonItem x:Name="Odśwież_dostawce" Content="Odśwież dostawcę" Glyph="{dx:DXImage SvgImages/Spreadsheet/RefreshPivotTable.svg}" RibbonStyle="Large" ItemClick="Odśwież_ItemClick"/>
                     </dxr:RibbonPageGroup>
                 </dxr:RibbonPage>
 
@@ -58,6 +67,9 @@
                     <dxr:RibbonPageGroup Caption="">
                         <dxb:BarButtonItem x:Name="Usun_producenta" Content="Usuń producenta" Glyph="{dx:DXImage SvgImages/HybridDemoIcons/BottomPanel/HybridDemo_Delete.svg}" RibbonStyle="Large" ItemClick="Usun_producenta_ItemClick"/>
                     </dxr:RibbonPageGroup>
+                    <dxr:RibbonPageGroup Caption="">
+                        <dxb:BarButtonItem x:Name="Odśwież_producenta" Content="Odśwież producenta" Glyph="{dx:DXImage SvgImages/Spreadsheet/RefreshPivotTable.svg}" RibbonStyle="Large" ItemClick="Odśwież_ItemClick"/>
+                    </dxr:RibbonPageGroup>
                 </dxr:RibbonPage>
 
             </dxr:RibbonDefaultPageCategory>
@@ -67,13 +79,10 @@
                 <dxdo:LayoutGroup Orientation="Vertical" Margin="0,23,0,0">
                     <dxdo:LayoutPanel Caption="Produkty" Margin="0,-23,0,0">
                         <dxlc:LayoutControl>
-                            <dxg:GridControl AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True" ItemsSource="{Binding Produkty}">
+                            <dxg:GridControl x:Name="GridControlProdukty" AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True">
                                 <dxg:GridControl.View>
                                     <dxg:TableView/>
                                 </dxg:GridControl.View>
-                                <dxg:GridControl.DataContext>
-                                    <DataBase:Models/>
-                                </dxg:GridControl.DataContext>
                                 <dxg:GridColumn Header="ID Produktu" FieldName="id_produktu" IsSmart="True"/>
                                 <dxg:GridColumn Header="ID Producenta" FieldName="id_producenta" IsSmart="True"/>
                                 <dxg:GridColumn Header="ID Kategorii" FieldName="id_kategorii" IsSmart="True"/>
@@ -92,10 +101,7 @@
                     <dxdo:LayoutGroup>
                         <dxdo:LayoutPanel Caption="Kategorie">
                             <dxlc:LayoutControl>
-                                <dxg:GridControl AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True" ItemsSource="{Binding Kategorie}">
-                                    <dxg:GridControl.DataContext>
-                                        <DataBase:Models/>
-                                    </dxg:GridControl.DataContext>
+                                <dxg:GridControl x:Name="GridControlKategorie" AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True">
                                     <dxg:GridControl.View>
                                         <dxg:TableView/>
                                     </dxg:GridControl.View>
@@ -106,10 +112,7 @@
                         </dxdo:LayoutPanel>
                         <dxdo:LayoutPanel Caption="Dostawcy">
                             <dxlc:LayoutControl>
-                                <dxg:GridControl AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True" ItemsSource="{Binding Dostawcy}">
-                                    <dxg:GridControl.DataContext>
-                                        <DataBase:Models/>
-                                    </dxg:GridControl.DataContext>
+                                <dxg:GridControl x:Name="GridControlDostawcy" AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True">
                                     <dxg:GridControl.View>
                                         <dxg:TableView>
                                             <dxg:TableView.DataContext>
@@ -124,10 +127,7 @@
                         </dxdo:LayoutPanel>
                         <dxdo:LayoutPanel Caption="Producenci">
                             <dxlc:LayoutControl>
-                                <dxg:GridControl AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True" ItemsSource="{Binding Producenci}">
-                                    <dxg:GridControl.DataContext>
-                                        <DataBase:Models/>
-                                    </dxg:GridControl.DataContext>
+                                <dxg:GridControl x:Name="GridControlProducenci" AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True">
                                     <dxg:GridControl.View>
                                         <dxg:TableView/>
                                     </dxg:GridControl.View>
