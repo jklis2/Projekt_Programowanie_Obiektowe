@@ -43,5 +43,10 @@ namespace Sklep.Services
         {
             return dbContext.Dostawca.ToList();
         }
+
+        public Dostawca Find(int id)
+        {
+            return dbContext.Dostawca.Find(id);
+        }
     }
 }

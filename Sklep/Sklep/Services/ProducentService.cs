@@ -43,5 +43,10 @@ namespace Sklep.Services
         {
             return dbContext.Producent.ToList();
         }
+
+        public Producent Find(int id)
+        {
+            return dbContext.Producent.Find(id);
+        }
     }
 }

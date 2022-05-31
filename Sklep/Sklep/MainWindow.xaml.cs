@@ -1,5 +1,6 @@
 ﻿using DevExpress.Xpf.Core;
 using Sklep.DataBase;
+using Sklep.Services;
 using Sklep.Views;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,10 @@ namespace Sklep
     public partial class MainWindow : ThemedWindow
     {
         Asortyment_sklepuEntities dbContext = new Asortyment_sklepuEntities();
+
+        KategoriaService kategoriaService = new KategoriaService();
+        ProducentService producentService = new ProducentService();
+        DostawcaService dostawcaService = new DostawcaService();
 
         public MainWindow()
         {
@@ -117,6 +122,37 @@ namespace Sklep
             GridControlProducenci.RefreshData();
             GridControlDostawcy.RefreshData();
             GridControlKategorie.RefreshData();
+        }
+
+        private void GridControlProdukty_CustomColumnDisplayText(object sender, DevExpress.Xpf.Grid.CustomColumnDisplayTextEventArgs e)
+        {
+            var row = GridControlProdukty.GetRow(e.RowHandle) as Produkt;
+            if(e.Column == KolumnaKategoria)
+            {
+                var nazwaKategorii = kategoriaService.Find(row.id_kategorii);
+                if(nazwaKategorii != null)
+                {
+                    e.DisplayText = nazwaKategorii.nazwa_kategorii.ToString();
+                }
+            }
+
+            if(e.Column == KolumnaProducent)
+            {
+                var nazwaProducenta = producentService.Find(row.id_producenta);
+                if(nazwaProducenta != null)
+                {
+                    e.DisplayText = nazwaProducenta.nazwa_producenta.ToString();
+                }
+            }
+
+            if (e.Column == KolumnaDostawca)
+            {
+                var nazwaDostawcy = dostawcaService.Find(row.id_dostawcy);
+                if (nazwaDostawcy != null)
+                {
+                    e.DisplayText = nazwaDostawcy.nazwa_dostawcy.ToString();
+                }
+            }
         }
     }
 }

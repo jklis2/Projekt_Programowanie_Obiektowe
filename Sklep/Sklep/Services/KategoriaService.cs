@@ -43,5 +43,10 @@ namespace Sklep.Services
         {
             return dbContext.Kategoria.ToList();
         }
+
+        public Kategoria Find(int id)
+        {
+            return dbContext.Kategoria.Find(id);
+        }
     }
 }

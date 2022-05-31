@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="Asortyment_sklepuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Asortyment_sklepuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Dostawca">
           <Key>
             <PropertyRef Name="id_dostawcy" />
@@ -105,7 +105,8 @@
             <End Role="Produkt" EntitySet="Produkt" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Asortyment_sklepuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -115,7 +116,7 @@
           </Key>
           <Property Name="id_dostawcy" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nazwa_dostawcy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Produkt" Relationship="Asortyment_sklepuModel.FK_Produkt_Dostawca" FromRole="Dostawca" ToRole="Produkt" />
+          <NavigationProperty Name="Produkt" Relationship="Self.FK_Produkt_Dostawca" FromRole="Dostawca" ToRole="Produkt" />
         </EntityType>
         <EntityType Name="Kategoria">
           <Key>
@@ -146,9 +147,9 @@
           <Property Name="ilosc_sztuk_w_sklepie" Type="Int32" Nullable="false" />
           <Property Name="cena" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="data_kolejnej_dostawy" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Dostawca" Relationship="Self.FK_Produkt_Dostawca" FromRole="Produkt" ToRole="Dostawca" />
           <NavigationProperty Name="Kategoria" Relationship="Self.FK_Produkt_Kategoria" FromRole="Produkt" ToRole="Kategoria" />
           <NavigationProperty Name="Producent" Relationship="Self.FK_Produkt_Producent" FromRole="Produkt" ToRole="Producent" />
-          <NavigationProperty Name="Dostawca" Relationship="Asortyment_sklepuModel.FK_Produkt_Dostawca" FromRole="Produkt" ToRole="Dostawca" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -160,6 +161,18 @@
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
+        <Association Name="FK_Produkt_Dostawca">
+          <End Role="Dostawca" Type="Self.Dostawca" Multiplicity="1" />
+          <End Role="Produkt" Type="Self.Produkt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dostawca">
+              <PropertyRef Name="id_dostawcy" />
+            </Principal>
+            <Dependent Role="Produkt">
+              <PropertyRef Name="id_dostawcy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Produkt_Kategoria">
           <End Role="Kategoria" Type="Self.Kategoria" Multiplicity="1" />
           <End Role="Produkt" Type="Self.Produkt" Multiplicity="*" />
@@ -190,6 +203,10 @@
           <EntitySet Name="Producent" EntityType="Self.Producent" />
           <EntitySet Name="Produkt" EntityType="Self.Produkt" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <AssociationSet Name="FK_Produkt_Dostawca" Association="Self.FK_Produkt_Dostawca">
+            <End Role="Dostawca" EntitySet="Dostawca" />
+            <End Role="Produkt" EntitySet="Produkt" />
+          </AssociationSet>
           <AssociationSet Name="FK_Produkt_Kategoria" Association="Self.FK_Produkt_Kategoria">
             <End Role="Kategoria" EntitySet="Kategoria" />
             <End Role="Produkt" EntitySet="Produkt" />
@@ -198,23 +215,7 @@
             <End Role="Producent" EntitySet="Producent" />
             <End Role="Produkt" EntitySet="Produkt" />
           </AssociationSet>
-          <AssociationSet Name="FK_Produkt_Dostawca" Association="Asortyment_sklepuModel.FK_Produkt_Dostawca">
-            <End Role="Dostawca" EntitySet="Dostawca" />
-            <End Role="Produkt" EntitySet="Produkt" />
-          </AssociationSet>
         </EntityContainer>
-        <Association Name="FK_Produkt_Dostawca">
-          <End Type="Asortyment_sklepuModel.Dostawca" Role="Dostawca" Multiplicity="1" />
-          <End Type="Asortyment_sklepuModel.Produkt" Role="Produkt" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Dostawca">
-              <PropertyRef Name="id_dostawcy" />
-            </Principal>
-            <Dependent Role="Produkt">
-              <PropertyRef Name="id_dostawcy" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->

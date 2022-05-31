@@ -24,8 +24,8 @@ namespace Sklep.DataBase
         public decimal cena { get; set; }
         public System.DateTime data_kolejnej_dostawy { get; set; }
     
+        public virtual Dostawca Dostawca { get; set; }
         public virtual Kategoria Kategoria { get; set; }
         public virtual Producent Producent { get; set; }
-        public virtual Dostawca Dostawca { get; set; }
     }
 }

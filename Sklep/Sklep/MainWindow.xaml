@@ -79,22 +79,22 @@
                 <dxdo:LayoutGroup Orientation="Vertical" Margin="0,23,0,0">
                     <dxdo:LayoutPanel Caption="Produkty" Margin="0,-23,0,0">
                         <dxlc:LayoutControl>
-                            <dxg:GridControl x:Name="GridControlProdukty" AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True">
+                            <dxg:GridControl x:Name="GridControlProdukty" AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True" CustomColumnDisplayText="GridControlProdukty_CustomColumnDisplayText">
                                 <dxg:GridControl.View>
                                     <dxg:TableView/>
                                 </dxg:GridControl.View>
                                 <dxg:GridColumn Header="ID Produktu" FieldName="id_produktu" IsSmart="True"/>
-                                <dxg:GridColumn Header="ID Producenta" FieldName="id_producenta" IsSmart="True"/>
-                                <dxg:GridColumn Header="ID Kategorii" FieldName="id_kategorii" IsSmart="True"/>
-                                <dxg:GridColumn Header="ID Dostawcy" FieldName="id_dostawcy" IsSmart="True"/>
-                                <dxg:GridColumn Header="Opis produktu" FieldName="opis_produktu" IsSmart="True"/>
                                 <dxg:GridColumn Header="Nazwa produktu" FieldName="nazwa_produktu" IsSmart="True"/>
+                                <dxg:GridColumn Header="ID Kategorii" FieldName="id_kategorii" IsSmart="True"/>
+                                <dxg:GridColumn x:Name="KolumnaKategoria" Header="Kategoria" FieldName="Kategoria" IsSmart="True"/>
+                                <dxg:GridColumn Header="ID Producenta" FieldName="id_producenta" IsSmart="True"/>
+                                <dxg:GridColumn x:Name="KolumnaProducent" Header="Producent" FieldName="Producent" IsSmart="True"/>
+                                <dxg:GridColumn Header="ID Dostawcy" FieldName="id_dostawcy" IsSmart="True"/>
+                                <dxg:GridColumn x:Name="KolumnaDostawca" Header="Dostawca" FieldName="Dostawca" IsSmart="True"/>
+                                <dxg:GridColumn Header="Opis produktu" FieldName="opis_produktu" IsSmart="True"/>
                                 <dxg:GridColumn Header="Ilość sztuk w sklepie" FieldName="ilosc_sztuk_w_sklepie" IsSmart="True"/>
                                 <dxg:GridColumn Header="Cena" FieldName="cena" IsSmart="True"/>
                                 <dxg:GridColumn Header="Data kolejnej dostawy" FieldName="data_kolejnej_dostawy" IsSmart="True"/>
-                                <dxg:GridColumn Header="Kategoria" FieldName="Kategoria" IsSmart="True"/>
-                                <dxg:GridColumn Header="Producent" FieldName="Producent" IsSmart="True"/>
-                                <dxg:GridColumn Header="Dostawca" FieldName="Dostawca" IsSmart="True"/>
                             </dxg:GridControl>
                         </dxlc:LayoutControl>
                     </dxdo:LayoutPanel>

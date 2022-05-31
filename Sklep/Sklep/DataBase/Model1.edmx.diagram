@@ -4,15 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="7c7c4e4a8dab46128e032562935b79c4" Name="Diagram1">
-        <EntityTypeShape EntityType="Asortyment_sklepuModel.Dostawca" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Asortyment_sklepuModel.Kategoria" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Asortyment_sklepuModel.Producent" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+      <Diagram DiagramId="3fcfe3eecd85453288859cea223c71cb" Name="Diagram1">
+        <EntityTypeShape EntityType="Asortyment_sklepuModel.Dostawca" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Asortyment_sklepuModel.Kategoria" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Asortyment_sklepuModel.Producent" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Asortyment_sklepuModel.Produkt" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="Asortyment_sklepuModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Asortyment_sklepuModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="Asortyment_sklepuModel.FK_Produkt_Dostawca" ManuallyRouted="false" />
         <AssociationConnector Association="Asortyment_sklepuModel.FK_Produkt_Kategoria" ManuallyRouted="false" />
         <AssociationConnector Association="Asortyment_sklepuModel.FK_Produkt_Producent" ManuallyRouted="false" />
-        <AssociationConnector Association="Asortyment_sklepuModel.FK_Produkt_Dostawca" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
