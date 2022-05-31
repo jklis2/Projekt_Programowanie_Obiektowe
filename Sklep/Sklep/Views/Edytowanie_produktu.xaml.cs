@@ -33,6 +33,8 @@ namespace Sklep.Views
             InitializeComponent();
 
             SetCheckBoxes();
+
+            Zapisz.IsEnabled = false;
         }
 
         private void SetCheckBoxes()
@@ -92,6 +94,25 @@ namespace Sklep.Views
                 Cena_produktu_Text.Text = item.cena.ToString();
                 Ilosc_sztuk_w_sklepie_Text.Text = item.ilosc_sztuk_w_sklepie.ToString();
                 Data_kolejnej_dostawy_Text.Text = item.data_kolejnej_dostawy.ToString();
+            }
+            Zapisz.IsEnabled = false;
+        }
+
+        private void Data_kolejnej_dostawy_Text_Validate(object sender, DevExpress.Xpf.Editors.ValidationEventArgs e)
+        {
+            if (e.Value != null)
+            {
+                var row = e.Value.ToString();
+                var cos = Convert.ToDateTime(row);
+                if (cos < DateTime.Now)
+                {
+                    e.SetError("Data musi być przyszła!", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning);
+                    Zapisz.IsEnabled = false;
+                }
+                else
+                {
+                    Zapisz.IsEnabled = true;
+                }
             }
         }
     }

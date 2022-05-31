@@ -17,10 +17,10 @@
         <TextBox x:Name="Cena_produktu_Text" HorizontalAlignment="Left" Margin="102,119,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="100"/>
         <TextBox x:Name="Ilosc_sztuk_w_sklepie_Text" HorizontalAlignment="Left" Margin="132,155,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="Opis_produktu_Text" HorizontalAlignment="Left" Margin="100,46,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="878"/>
-        <dxe:DateEdit x:Name="Data_kolejnej_dostawy_Text" HorizontalAlignment="Left" Margin="143,188,0,0" VerticalAlignment="Top" Height="22" Width="109"/>
+        <dxe:DateEdit x:Name="Data_kolejnej_dostawy_Text" HorizontalAlignment="Left" Margin="143,188,0,0" VerticalAlignment="Top" Height="22" Width="109" Validate="Data_kolejnej_dostawy_Text_Validate"/>
         <Label Content="Kategoria produktu:" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <ComboBox x:Name="Kategoria_produktu_Text" HorizontalAlignment="Left" Margin="129,84,0,0" VerticalAlignment="Top" Width="120" SelectedItem="{Binding id_kategorii}" DisplayMemberPath="nazwa_kategorii"/>
-        <dx:SimpleButton x:Name="Zapisz" Content="Zapisz" HorizontalAlignment="Left" Margin="864,246,0,0" VerticalAlignment="Top" Width="114" Glyph="{dx:DXImage SvgImages/Save/Save.svg}" Click="Zapisz_Click"/>
+        <dx:SimpleButton x:Name="Zapisz" Content="Zapisz" IsEnabled="False" HorizontalAlignment="Left" Margin="864,246,0,0" VerticalAlignment="Top" Width="114" Glyph="{dx:DXImage SvgImages/Save/Save.svg}" Click="Zapisz_Click"/>
         <Label Content="Nazwa producenta:" HorizontalAlignment="Left" Margin="10,225,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <ComboBox x:Name="Nazwa_producenta_Text" HorizontalAlignment="Left" Margin="124,225,0,0" VerticalAlignment="Top" Width="120" SelectedItem="{Binding id_producenta}" DisplayMemberPath="nazwa_producenta"/>
         <Label Content="Nazwa dostawcy:" HorizontalAlignment="Left" Margin="10,264,0,0" VerticalAlignment="Top" FontWeight="Bold"/>

@@ -24,10 +24,10 @@
         <TextBox x:Name="Cena_produktu_Text" HorizontalAlignment="Left" Margin="102,165,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="100"/>
         <TextBox x:Name="Ilosc_sztuk_w_sklepie_Text" HorizontalAlignment="Left" Margin="132,197,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="Opis_produktu_Text" HorizontalAlignment="Left" Margin="100,92,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="878"/>
-        <dxe:DateEdit x:Name="Data_kolejnej_dostawy_Text" HorizontalAlignment="Left" Margin="143,233,0,0" VerticalAlignment="Top" Height="22" Width="109"/>
+        <dxe:DateEdit x:Name="Data_kolejnej_dostawy_Text" HorizontalAlignment="Left" Margin="143,233,0,0" VerticalAlignment="Top" Height="22" Width="109" Validate="Data_kolejnej_dostawy_Text_Validate"/>
         <Label Content="Kategoria produktu:" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <ComboBox x:Name="Kategoria_produktu_Text" HorizontalAlignment="Left" Margin="129,130,0,0" VerticalAlignment="Top" Width="120" SelectedItem="{Binding id_kategorii}" DisplayMemberPath="nazwa_kategorii"/>
-        <dx:SimpleButton x:Name="Zapisz" Content="Zapisz" HorizontalAlignment="Left" Margin="773,289,0,0" VerticalAlignment="Top" Width="130" Glyph="{dx:DXImage SvgImages/Save/Save.svg}" Click="Zapisz_Click" Height="40"/>
+        <dx:SimpleButton x:Name="Zapisz" Content="Zapisz" HorizontalAlignment="Left" IsEnabled="False" Margin="773,289,0,0" VerticalAlignment="Top" Width="130" Glyph="{dx:DXImage SvgImages/Save/Save.svg}" Click="Zapisz_Click" Height="40"/>
         <Label Content="Nazwa producenta:" HorizontalAlignment="Left" Margin="10,271,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <ComboBox x:Name="Nazwa_producenta_Text" HorizontalAlignment="Left" Margin="124,271,0,0" VerticalAlignment="Top" Width="120" SelectedItem="{Binding id_producenta}" DisplayMemberPath="nazwa_producenta"/>
         <Label Content="Nazwa dostawcy:" HorizontalAlignment="Left" Margin="10,307,0,0" VerticalAlignment="Top" FontWeight="Bold"/>

@@ -79,5 +79,22 @@ namespace Sklep.Views
             Save();
             this.Close();
         }
+
+        private void Data_kolejnej_dostawy_Text_Validate(object sender, DevExpress.Xpf.Editors.ValidationEventArgs e)
+        {
+            if(e.Value != null)
+            {
+                var row = e.Value.ToString();
+                var cos = Convert.ToDateTime(row);
+                if (cos < DateTime.Now)
+                {
+                    e.SetError("Data musi być przyszła!", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning);
+                }
+                else
+                {
+                    Zapisz.IsEnabled = true;
+                }
+            }
+        }
     }
 }

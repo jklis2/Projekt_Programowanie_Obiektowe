@@ -1770,14 +1770,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Sklep.exe" size="84960">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Sklep.exe" size="85984">
       <assemblyIdentity name="Sklep" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>N6iAqsUwluy311/X5ItWmSU/ppA1cUB4Y/SHcNbQHJg=</dsig:DigestValue>
+        <dsig:DigestValue>2piX8597Vg989MNKDuWAlW54NSQPhZBs10028BpBhhQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
