@@ -3,7 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
-    Title="Dodawanie_producenta" Height="499" Width="510"
+    Title="Dodawanie producenta" Height="499" Width="510"
     >
 
     <Grid>

@@ -4,7 +4,7 @@
     xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
     xmlns:dxdash="http://schemas.devexpress.com/winfx/2008/xaml/dashboard"
     x:Class="Sklep.Views.Edytowanie_dostawcy"
-    Title="Edytowanie_dostawcy" Height="483" Width="508"
+    Title="Edytowanie dostawcy" Height="483" Width="508"
     >
 
     <Grid>

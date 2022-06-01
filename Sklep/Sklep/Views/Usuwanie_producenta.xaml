@@ -3,7 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
-    Title="Usuwanie_producenta" Height="500" Width="495"
+    Title="Usuwanie producenta" Height="500" Width="495"
     >
 
     <Grid>

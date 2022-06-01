@@ -4,7 +4,7 @@
     xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
     xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
     x:Class="Sklep.Views.Edytowanie_produktu"
-    Title="Edytowanie_produktu" Height="800" Width="1000"
+    Title="Edytowanie produktu" Height="800" Width="1000"
     >
 
     <Grid>

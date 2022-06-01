@@ -4,7 +4,7 @@
     xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
     xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
     x:Class="Sklep.Views.Dodawanie_produktu"
-    Title="Dodawanie_produktu" Height="800" Width="1000"
+    Title="Dodawanie produktu" Height="800" Width="1000"
     >
 
     <Grid>

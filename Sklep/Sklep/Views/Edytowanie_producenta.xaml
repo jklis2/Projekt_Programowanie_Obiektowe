@@ -4,7 +4,7 @@
     xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
     xmlns:dxdash="http://schemas.devexpress.com/winfx/2008/xaml/dashboard" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
     x:Class="Sklep.Views.Edytowanie_producenta"
-    Title="Edytowanie_producenta" Height="503" Width="501"
+    Title="Edytowanie producenta" Height="503" Width="501"
     >
 
     <Grid>
