@@ -30,7 +30,7 @@ namespace Sklep.Views
             ComboBox_Dostawca.ItemsSource = service.GetAll();
         }
 
-        public void Remove()
+        private void Remove()
         {
             var nazwa_dostawcy_przyjscie = ComboBox_Dostawca.SelectedItem as Dostawca;
 

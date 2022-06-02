@@ -29,7 +29,7 @@ namespace Sklep.Views
             ComboBox_Producent.ItemsSource = dbContext.Producent.ToList();
         }
 
-        public void Remove()
+        private void Remove()
         {
             var nazwa_producenta_przyjscie = ComboBox_Producent.SelectedItem as Producent;
             var producent = dbContext.Producent.Find(nazwa_producenta_przyjscie.id_producenta);

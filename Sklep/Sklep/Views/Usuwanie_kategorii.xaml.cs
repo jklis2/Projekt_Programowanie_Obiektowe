@@ -30,7 +30,7 @@ namespace Sklep.Views
             ComboBox_Kategoria.ItemsSource = kategoriaService.GetAll();
         }
 
-        public void Remove()
+        private void Remove()
         {
             var nazwa_kategorii_przyjscie = ComboBox_Kategoria.SelectedItem as Kategoria;
             kategoriaService.Remove(nazwa_kategorii_przyjscie.id_kategorii);

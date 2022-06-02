@@ -7,16 +7,27 @@ using System.Threading.Tasks;
 
 namespace Sklep.Services
 {
+    /// <summary>
+    /// Serwis do obsługi modelu Produtk
+    /// </summary>
     public class ProduktService
     {
         Asortyment_sklepuEntities dbContext = new Asortyment_sklepuEntities();
 
+        /// <summary>
+        /// Metoda dodaje produkt do bazy danych
+        /// </summary>
+        /// <param name="produkt"></param>
         public void Add(Produkt produkt)
         {
             dbContext.Produkt.Add(produkt);
             dbContext.SaveChanges();
         }
 
+        /// <summary>
+        /// Metoda szuka w badzie danych produkt po id, a następnie go edytuje
+        /// </summary>
+        /// <param name="produkt"></param>
         public void Edit(Produkt produkt)
         {
             if (produkt != null)
@@ -67,6 +78,10 @@ namespace Sklep.Services
             }
         }
 
+        /// <summary>
+        /// Metoda szuka w bazie danych produkt po id, a nastepnie go usuwa
+        /// </summary>
+        /// <param name="ProduktID"></param>
         public void Remove(int ProduktID)
         {
             var produkt = dbContext.Produkt.Find(ProduktID);
@@ -74,6 +89,10 @@ namespace Sklep.Services
             dbContext.SaveChanges();
         }
 
+        /// <summary>
+        /// Metoda pobiera z bazy danych wszystkie produkty
+        /// </summary>
+        /// <returns></returns>
         public List<Produkt> GetAll()
         {
             return dbContext.Produkt.ToList();
